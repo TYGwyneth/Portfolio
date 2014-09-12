@@ -1,0 +1,362 @@
+/* General Demo Style */
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0; max-width: 100%;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	color: #b3b9bf;
+	background: #f9f9f9;
+	//background: #000;
+	font-weight: 100; 
+}
+
+a {
+	color: #b3b9bf;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #333;
+}
+
+/* Gravity Canvas */
+
+/*canvas {
+	height: 700px;
+}*/
+
+.canvasWrap {
+	z-index: -1; 
+}
+
+/* Header */
+
+#header {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	z-index: 1;
+}
+
+#header #menuButton {
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	top: 20px;
+	left: 20px;
+}
+
+#header #menuButton:hover {
+	cursor: pointer;
+}
+
+#header .menuButtonLine {
+	height: 2px;
+	width: 10px;
+	margin-bottom: 2px;
+	background: #e5007d;
+
+	transition: transform 0.5s;
+}
+
+/* smiley */
+
+#smiley {
+	position: fixed;
+	top: 48%;
+	right: 20px;
+	color: #e5007d;
+	font-size: 40px;
+	z-index: 3;
+	-webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/* footer */
+
+#footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background: #f7f7f7;
+	z-index: 1;
+	
+	-webkit-box-shadow: -2px -2px 5px 2px #ebebeb;
+	-moz-box-shadow: -2px -2px 5px 2px #ebebeb; 
+	box-shadow: 0px 0px 4px 1px #ebebeb; 
+}
+
+#footer #contact {
+	margin: 0 auto;
+	/*height: 20px;*/
+	width: 35px;
+	margin-top: 12px;
+}
+
+#footer #contact img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+/* secretBox */
+
+#secretBox {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 350px;
+	padding: 20px;
+	color: #f9f9f9;
+	text-align: right;
+}
+
+#saveButtonBox {
+	
+}
+
+#saveButton {
+	position: absolute;
+	right: 20px;
+	text-align: center;
+	margin: 30px auto;
+	padding: 5px;
+	width: 80px;
+	font-size: 20px;
+	font-weight: 300;
+
+	//background: #e5007d;
+}
+
+#saveButton:hover {
+	cursor: pointer;
+}
+
+/* ProgressBar */
+
+.ui-progressbar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 1px;
+	width: 100%;
+	background: #CCC;
+	z-index: 2;
+
+	//-ms-transform: rotate(90deg); /* IE 9 */
+    //-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    //transform: rotate(90deg);
+}
+
+.ui-progressbar-value {
+	height: 1px;
+	width: 200px;
+	background: #e5007d;
+}
+
+/* Left Menu */
+
+#sidr {
+	display: none;
+	position: absolute;
+	position: fixed;
+	height: 100%;
+	width: 20%;
+	background: #f9f9f9;
+	z-index:999999;
+
+	-webkit-box-shadow:inset -2 -2 5px 2px #ebebeb;
+	-moz-box-shadow:inset -2 -2 5px 2px #ebebeb;
+	box-shadow:inset -2px -2px 5px 2px #ebebeb;
+}
+
+#sidr #sideMenuInner {
+	padding: 20px;
+}
+
+#sidr #menuText {
+	font-size: 22px;
+	color: #00e536;
+}
+
+#sidr #sideMenuInner #contactButton {
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 140px;
+	width: 110px;
+	padding: 10px;
+	background: #e5007d;
+	color: #f9f9f9;
+	font-weight: 300;
+	text-align: center;
+}
+
+#sidr #sideMenuInner h1 {
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	color: #00e536;
+}
+
+#sidr form {
+
+}
+
+#sidr textarea[name=flaskpost] {
+	width: 95%;
+	height: 200px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+	border: none;
+	resize: none;
+}
+
+#sidr input[type=button] {
+
+}
+
+/* Project Page Styling */
+
+#backButton {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	top: 20px;
+	left: 20px;
+	border: 2px solid #e5007d;
+	font-size: 26px;
+	font-weight: 300;
+	color: #e5007d;
+	border-radius: 20px;
+	text-align: center;
+}
+
+/* The different title images */
+
+.titleImg {
+	width: 100%;
+	height: 700px; 
+	padding-top: 300px;
+	text-align: center;
+	color: #FFF;
+	font-size: 80px;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+#kioku {
+	background: url("../images/kioku/prototyp1.jpg") no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
+#abrigo {
+	background: url("../images/abrigo/abrigo7.png") no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
+.textField {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	padding: 100px;
+
+	font-size: 20px;
+}
+
+#intro {
+	
+}
+
+#pageWrapProject #contact {
+	text-align: center;
+	padding: 10px;
+	margin-top: 150px;
+}
+
+#pageWrapProject #contact img {
+	width: 50px;
+}
+
+/*slideshow*/
+
+#slideshow {
+	padding: 150px;
+	margin-top: -150px;
+	margin-bottom: -150px;
+}
+
+#slides {
+	
+}
+
+#slides a {
+	float: left;
+	padding: 5px;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.slidesjs-container img {
+	
+}
+
+[title~="Previous"] {
+	margin-left: 10px;
+	color: #b3b9bf;
+}
+
+[title~="Next"] {
+	color: #b3b9bf;
+}
+
+#slides ul {
+	list-style-type: none;
+	float: right;
+	max-width: 300px;
+}
+
+#slides ul a {
+	font-size: 20px;
+}
+
+.slidesjs-pagination {
+	
+}
+
+.slidesjs-pagination li {
+	float: left;
+}
+
+.active {
+	color: #e5007d;
+}
+/*end slideshow*/
+
+.videoBox {
+	text-align: center;
+}
+
+/* ... */
+
+@media screen and (max-width: 25em) {
+
+	.codrops-icon span {
+		display: none;
+	}
+
+}
