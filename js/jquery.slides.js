@@ -17,10 +17,10 @@
         effect: "slide"
       },
       play: {
-        active: false,
+        active: true,
         effect: "slide",
         interval: 5000,
-        auto: false,
+        auto: true,
         swap: true,
         pauseOnHover: false,
         restartDelay: 2500
@@ -76,13 +76,13 @@
       $(".slidesjs-container", $element).wrapInner("<div class='slidesjs-control'>", $element).children();
       $(".slidesjs-control", $element).css({
         position: "relative",
-        left: 0
+        left: 0,
       });
       $(".slidesjs-control", $element).children().addClass("slidesjs-slide").css({
         position: "absolute",
         top: 0,
         left: 0,
-        width: "100%",
+        height: "100%",
         zIndex: 0,
         display: "none",
         webkitBackfaceVisibility: "hidden"
@@ -142,13 +142,13 @@
           "class": "slidesjs-play slidesjs-navigation",
           href: "#",
           title: "Play",
-          text: "Play"
+          text: ""
         }).appendTo($element);
         stopButton = $("<a>", {
           "class": "slidesjs-stop slidesjs-navigation",
           href: "#",
           title: "Stop",
-          text: "Stop"
+          text: ""
         }).appendTo($element);
         playButton.click(function(e) {
           e.preventDefault();
@@ -176,7 +176,7 @@
           paginationLink = $("<a>", {
             href: "#",
             "data-slidesjs-item": i,
-            html: "◉"
+            html: "⦁"
           }).appendTo(paginationItem);
           return paginationLink.click(function(e) {
             e.preventDefault();

@@ -9,7 +9,7 @@ body, html { font-size: 100%; padding: 0; margin: 0; max-width: 100%;}
 
 body {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
-	color: #b3b9bf;
+	color: #333;
 	background: #f9f9f9;
 	font-weight: 100; 
 }
@@ -22,6 +22,10 @@ a {
 a:hover,
 a:active {
 	color: #333;
+}
+
+strong {
+	font-weight: 300;
 }
 
 /* Gravity Canvas */
@@ -82,6 +86,10 @@ a:active {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
+#smiley:hover {
+	cursor: progress;
+}
+
 /* footer */
 
 #footer {
@@ -91,11 +99,11 @@ a:active {
 	height: 90px;
 	text-align: center;
 	background: #f7f7f7;
-	z-index: 1;
+	z-index: 999;
 	
-	-webkit-box-shadow: -2px -2px 5px 2px #ebebeb;
-	-moz-box-shadow: -2px -2px 5px 2px #ebebeb; 
-	box-shadow: 0px 0px 4px 1px #ebebeb; 
+	-webkit-box-shadow: 0px 0px 4px 0px #ccc;
+	-moz-box-shadow: 0px 0px 4px 0px #ccc; 
+	box-shadow: 0px 0px 4px 0px #ccc; 
 }
 
 #footer #contact {
@@ -104,7 +112,7 @@ a:active {
 }
 
 #footer #contact a {
-
+	font-style: italic;
 	padding: 25px 8px;
 	color: #fff;
 	background: #e5007d;
@@ -252,6 +260,28 @@ a:active {
 	text-align: center;
 }
 
+#pageWrapProject #contact {
+	position: fixed;
+	top: 350px;
+	right: 20px;
+}
+
+#pageWrapProject #contact a {
+	padding: 25px 8px;
+	color: #fff;
+	background: #e5007d;
+	font-size: 16px;
+	font-weight: 300;
+	font-style: italic;
+	border-radius: 40px;
+}
+
+#factsText {
+	padding: 150px;
+	color: #00e536;
+	font-weight: 200;
+}
+
 /* The different title images */
 
 .titleImg {
@@ -277,26 +307,49 @@ a:active {
 	background-position: bottom;
 }
 
+#game {
+	background: url("../images/SpelPoster.jpg") no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
+#neo {
+	background: url("../images/neo/hand.jpg") no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
+/* Textfield and list */
+
 .textField {
 	margin-top: 100px;
 	margin-bottom: 100px;
-	padding: 100px;
+	padding: 50px 150px;
 
 	font-size: 20px;
 }
 
+.textField ul {
+	position: relative;
+	margin: 0 auto;
+	width: 400px;
+	list-style: none;
+
+}
+
+.textField li {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.textField li a {
+	font-size: 25px;
+	font-weight: 100;
+	color: #e5007d;
+}	
+
 #intro {
 	
-}
-
-#pageWrapProject #contact {
-	text-align: center;
-	padding: 10px;
-	margin-top: 150px;
-}
-
-#pageWrapProject #contact img {
-	width: 50px;
 }
 
 /*slideshow*/
@@ -305,9 +358,10 @@ a:active {
 	padding: 150px;
 	margin-top: -150px;
 	margin-bottom: -150px;
+	z-index: 0;
 }
 
-#slides {
+#slides img {
 	
 }
 
@@ -356,6 +410,7 @@ a:active {
 
 .videoBox {
 	text-align: center;
+	margin-bottom: 150px;
 }
 
 /* ... */

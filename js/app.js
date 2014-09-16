@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	var paddingValue = Math.floor((Math.random()*100)+0);
+
+	//var paddingValue = Math.floor((Math.random()*100)+0);
 	//$(".grid li").css({ "margin": paddingValue });
 	
 	// Make list stuff draggable
@@ -57,5 +58,17 @@ $(document).ready(function(){
 		for (var i = ul.children.length; i >= 0; i--) {
 		    ul.appendChild(ul.children[Math.random() * i | 0]);
 		}
+
+	// Random smiley links
+	$('#smiley').click(function () {
+	var randomlinks=new Array()
+	randomlinks[0]="http://www.dietraumdeutung.com"
+	randomlinks[1]="http://tygwyneth.github.io/AllOutOfApps/"
+	randomlinks[2]="http://tygwyneth.github.io/BirdInCup/"
+	randomlinks[3]="http://tygwyneth.github.io/prism/"
+	randomlinks[4]="http://tygwyneth.github.io/2d3d/"
+	randomlinks[5]="http://tygwyneth.github.io/TheGame/"
+	window.open(randomlinks[Math.floor(Math.random()*randomlinks.length)]);
+	});
 	
 });
