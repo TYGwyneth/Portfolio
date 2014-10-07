@@ -8,12 +8,15 @@
 }
 
 .grid li {
+	/*display: inline;*/
 	display: inline-block;
 	width: 430px;
 	margin: 0;
 	padding: 20px;
+	/*float: left;*/
 	text-align: left;
 	position: relative;
+	overflow: auto;
 }
 
 /*.grid li2 {
@@ -28,6 +31,7 @@
 .grid figure {
 	margin: 0;
 	position: relative;
+	/*border: solid 2px;*/
 }
 
 .grid figure:hover {
@@ -45,8 +49,10 @@
 }
 
 .grid figure .textLink {
-	margin-top: 250px;
-	margin-bottom: 250px;
+	/*margin-top: 248px;
+	padding-top: 200px;
+	margin-bottom: 250px;*/
+	padding: 248px 0px 250px 0px;
 	text-align: center;
 	font-size: 40px;
 	font-weight: 100;
@@ -54,6 +60,7 @@
 }
 
 .grid figure .textLink a {
+	
 	color: #434854;
 }
 

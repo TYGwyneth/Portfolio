@@ -319,6 +319,12 @@ strong {
 	background-position: bottom;
 }
 
+#wifly {
+	background: url("../images/wifly/wiflyLogo.jpg") no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
 /* Textfield and list */
 
 .textField {
