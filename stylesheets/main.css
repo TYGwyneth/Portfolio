@@ -198,6 +198,10 @@ strong {
 	box-shadow:inset -2px -2px 5px 2px #ebebeb;
 }
 
+#sidr #sideMenuWrap {
+	height: 100%;
+}
+
 #sidr #sideMenuInner {
 	padding: 20px;
 }
