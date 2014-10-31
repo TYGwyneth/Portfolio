@@ -130,5 +130,39 @@ $(document).ready(function(){
 	}
 
 	setInterval(updateGradient,10);
+
+	// Let's talk about....
+
+	function clearBox(elementID)
+	{
+	    document.getElementById(elementID).innerHTML = "";
+	}
+
+	var talkAboutList = new Array(
+		["Something"],
+		["Gender"],
+		["Me"],
+		["&"],
+		["You"],
+		["Kioku"],
+		["Seinfeld"],
+		["Sex"]);
+
+	function insertWordToTalkAbout(){
+		$(".talkAbout").append(talkAboutList[Math.floor(Math.random()*talkAboutList.length)]);
+	}
+
+	window.setInterval(function(){
+		$(".talkAbout").fadeOut( "fast", function (){
+			$(".talkAbout").html("");
+			insertWordToTalkAbout();
+		});
+		$(".talkAbout").fadeIn();
+	}, 5000);
+
+	$('#menuButton').click(function () {
+		$(".talkAbout").html("");
+		insertWordToTalkAbout();
+	});
 	
 });
