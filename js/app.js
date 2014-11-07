@@ -68,6 +68,7 @@ $(document).ready(function(){
 	randomlinks[3]="http://tygwyneth.github.io/prism/"
 	randomlinks[4]="http://tygwyneth.github.io/2d3d/"
 	randomlinks[5]="http://tygwyneth.github.io/TheGame/"
+	randomlinks[6]="http://tygwyneth.github.io/thebpm/"
 	window.open(randomlinks[Math.floor(Math.random()*randomlinks.length)]);
 	});
 

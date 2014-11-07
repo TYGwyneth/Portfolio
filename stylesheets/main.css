@@ -28,6 +28,14 @@ strong {
 	font-weight: 300;
 }
 
+.button {
+	background: #e5007d;
+	color: #f9f9f9;
+	font-weight: 300;
+	font-size: 16px;
+	text-align: center;
+}
+
 /* Gravity Canvas */
 
 /*canvas {
@@ -210,7 +218,7 @@ strong {
 	color: #00e536;
 }
 
-#sidr #sideMenuInner #contactButton {
+#sidr #sideMenuInner .button {
 	display: inline-block;
 
 	width: 110px;
@@ -283,6 +291,16 @@ strong {
 	border-radius: 40px;
 }
 
+#pageWrapProject .button {
+	width: 80px;
+	height: 80px;
+	padding-top: 25px;
+	border-radius: 50px;
+	font-style: italic;
+	font-weight: 100;
+	margin: 0 auto;
+}
+
 #factsText {
 	padding: 150px;
 	color: #00e536;
@@ -328,6 +346,12 @@ strong {
 
 #wifly {
 	background: url("../images/wifly/wiflyLogo.jpg") no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
+#kego {
+	background: url("../images/KegoThumb.jpg") no-repeat;
 	background-size: cover;
 	background-position: bottom;
 }
