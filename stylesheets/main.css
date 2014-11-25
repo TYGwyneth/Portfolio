@@ -36,6 +36,44 @@ strong {
 	text-align: center;
 }
 
+/* Spinner */
+
+#spinnerWrap {
+	position: absolute;
+	width: 100%;
+	top: 40%;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  margin: 0px auto;
+  background-color: #e5007d;
+
+  border-radius: 100%;  
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+  0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleout {
+  0% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
 /* Gravity Canvas */
 
 /*canvas {
