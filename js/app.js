@@ -1,37 +1,33 @@
 $(document).ready(function(){
-
-	//var paddingValue = Math.floor((Math.random()*100)+0);
-	//$(".grid li").css({ "margin": paddingValue });
-	
-	// Make list stuff draggable
-	$(function() {
-    	$( "li" ).draggable();
-    	$( "#smiley" ).draggable();
-  	});
+	$('body').css({'overflow':'hidden'});
 
 	// Left Menu
 	leftMenu = false;
 	$(function(){
-	$('#menuButton').sidr();
+	//$('#menuButton').sidr();
 	$('#menuButton').click(function() {
-		$('body').css({'width':'80%','overflow':'hidden'});
+		//$('body').css({'overflow':'hidden'});
 
 		if (!leftMenu) {
+			$("#Menu").fadeIn();
+			$('#header #menuButton').css({'margin-top':'10px'});
 			$('.menuButtonLine:nth-child(3)').css({'visibility':'hidden'});
-			$('#header .menuButtonLine').css({'margin-bottom':'-2px'});
+			$('#header .menuButtonLine').css({'margin-bottom':'-6px'});
 			$('.menuButtonLine:first-child').css({'transform':'rotate(45deg)'});
 			$('.menuButtonLine:nth-child(2)').css({'transform':'rotate(135deg)'});
-			$('.menuButtonLine:first-child').css({'width':'13px'});
-			$('.menuButtonLine:nth-child(2)').css({'width':'13px'});
+			$('.menuButtonLine:first-child').css({'width':'33px'});
+			$('.menuButtonLine:nth-child(2)').css({'width':'33px'});
 			leftMenu = true;
 		}
 		else {
+			$("#Menu").fadeOut();
+			$('#header #menuButton').css({'margin-top':'0px'});
 			$('.menuButtonLine:first-child').css({'transform':'rotate(0deg)'});
 			$('.menuButtonLine:nth-child(3)').css({'visibility':'visible'});
 			$('.menuButtonLine:nth-child(2)').css({'transform':'rotate(0deg)'});
-			$('#header .menuButtonLine').css({'margin-bottom':'2px'});
-			$('.menuButtonLine:first-child').css({'width':'10px'});
-			$('.menuButtonLine:nth-child(2)').css({'width':'10px'});
+			$('#header .menuButtonLine').css({'margin-bottom':'4px'});
+			$('.menuButtonLine:first-child').css({'width':'30px'});
+			$('.menuButtonLine:nth-child(2)').css({'width':'30px'});
 			leftMenu = false;
 		};
 		
@@ -40,24 +36,18 @@ $(document).ready(function(){
 
 	// Scroll to show header
 
-	$('#footer').hide();
+	// $('#footer').hide();
 
-	$(window).scroll(function() {
-		if($(window).scrollTop()>$(window).width() * 9/16 * 0.7){
-			//$('#footer').css({'background':'#f9f9f9'});
-			$('#footer').slideDown();
-		}
-		else if($(window).scrollTop()<$(window).width() * 9/16 * 0.7){
+	// $(window).scroll(function() {
+	// 	if($(window).scrollTop()>$(window).width() * 9/16 * 0.7){
+	// 		//$('#footer').css({'background':'#f9f9f9'});
+	// 		$('#footer').slideDown();
+	// 	}
+	// 	else if($(window).scrollTop()<$(window).width() * 9/16 * 0.7){
 			
-			$('#footer').slideUp();
-		}
-	});
-
-	// Randomize list
-	var ul = document.getElementById('projectList');
-		for (var i = ul.children.length; i >= 0; i--) {
-		    ul.appendChild(ul.children[Math.random() * i | 0]);
-		}
+	// 		$('#footer').slideUp();
+	// 	}
+	// });
 
 	// Random smiley links
 	$('#smiley').click(function () {
@@ -111,7 +101,7 @@ $(document).ready(function(){
 	var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
 	var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
 
-	 $('#sideMenuWrap').css({
+	 $('#MenuWrap').css({
 	   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
 	    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
 

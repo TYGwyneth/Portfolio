@@ -11,11 +11,11 @@ body {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	color: #333;
 	background: #f9f9f9;
-	font-weight: 100; 
+	font-weight: 200; 
 }
 
 a {
-	color: #b3b9bf;
+	color: white;
 	text-decoration: none;
 }
 
@@ -53,11 +53,11 @@ strong {
 	width: 100%;
 	height: 50px;
 	text-align: center;
-	z-index: 1;
+	z-index: 3;
 }
 
 #header #menuButton {
-	position: absolute;
+	position: fixed;
 	height: 10px;
 	width: 10px;
 	top: 20px;
@@ -69,9 +69,9 @@ strong {
 }
 
 #header .menuButtonLine {
-	height: 2px;
-	width: 10px;
-	margin-bottom: 2px;
+	height: 6px;
+	width: 30px;
+	margin-bottom: 4px;
 	background: #e5007d;
 
 	transition: transform 0.5s;
@@ -81,7 +81,7 @@ strong {
 
 #smiley {
 	position: fixed;
-	top: 48%;
+	top: 42%;
 	right: 20px;
 	color: #e5007d;
 	font-size: 40px;
@@ -96,43 +96,6 @@ strong {
 
 #smiley:hover {
 	cursor: progress;
-}
-
-/* footer */
-
-#footer {
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
-	height: 90px;
-	text-align: center;
-	background: #f7f7f7;
-	z-index: 999;
-	
-	-webkit-box-shadow: 0px 0px 4px 0px #ccc;
-	-moz-box-shadow: 0px 0px 4px 0px #ccc; 
-	box-shadow: 0px 0px 4px 0px #ccc; 
-}
-
-#footer #contact {
-	margin: 0 auto;
-	margin-top: 35px;
-}
-
-#footer #contact a {
-	font-style: italic;
-	padding: 25px 8px;
-	color: #fff;
-	background: #e5007d;
-	font-size: 16px;
-	font-weight: 300;
-	border-radius: 40px;
-}
-
-#footer #contact img {
-	max-width: 100%;
-	display: block;
-	position: relative;
 }
 
 /* secretBox */
@@ -159,7 +122,7 @@ strong {
 	padding: 5px;
 	width: 80px;
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: 600;
 
 	//background: #e5007d;
 }
@@ -190,41 +153,48 @@ strong {
 	background: #e5007d;
 }
 
-/* Left Menu */
+/* Menu */
 
-#sidr {
+#Menu {
 	display: none;
 	position: fixed;
 	height: 100%;
-	width: 300px;
+	width: 100%;
 	background: #f9f9f9;
-	z-index:999999;
-
-	-webkit-box-shadow:inset -2 -2 5px 2px #ebebeb;
-	-moz-box-shadow:inset -2 -2 5px 2px #ebebeb;
-	box-shadow:inset -2px -2px 5px 2px #ebebeb;
+	z-index:2;
+	font-weight: 600;
+	font-size: 100px;
+	color: white;
 }
 
-#sidr #sideMenuWrap {
+#Menu #MenuWrap {
 	height: 100%;
+	border: 10px solid white;
 }
 
-#sidr #sideMenuInner {
-	padding: 20px;
+#Menu #MenuInner {
+	text-align: center;
+	padding: 200px;
 }
 
-#sidr #menuText {
+#Menu #MenuInner ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+#Menu #menuText {
 	font-size: 22px;
 	color: #00e536;
 }
 
-#sidr #sideMenuInner .button {
+#Menu #MenuInner .button {
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
 	display: inline-block;
-
 	width: 110px;
 	padding: 27px 0px;
-	margin: 30px 0px 80px 70px;
-
 	background: #e5007d;
 	color: #f9f9f9;
 	font-size: 16px;
@@ -234,18 +204,18 @@ strong {
 	border-radius: 70px;
 }
 
-#sidr #sideMenuInner h1 {
+#Menu #MenuInner h1 {
 	font-size: 30px;
 	font-weight: 400;
 	letter-spacing: 2px;
 	color: #00e536;
 }
 
-#sidr form {
+#Menu form {
 
 }
 
-#sidr textarea[name=flaskpost] {
+#Menu textarea[name=flaskpost] {
 	width: 95%;
 	height: 200px;
 	margin-top: 20px;
@@ -255,8 +225,40 @@ strong {
 	resize: none;
 }
 
-#sidr input[type=button] {
+#Menu input[type=button] {
 
+}
+
+/* NevBar Styling */
+
+#NavBar {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	text-align: center;
+	font-size: 50px;
+	font-weight: 600;
+}
+
+#NavBar a {
+	color: #e5007d;
+	color: #333;
+}
+
+#NavBar a:hover {
+	color: #333;
+	color: #e5007d;
+}
+
+#NavBar ul {
+	list-style: none;
+	max-width: 1334px;
+	margin: 0 auto
+}
+
+#NavBar ul li {
+	margin: 0px 30px 40px 30px;
+	float: left;
 }
 
 /* Project Page Styling */
@@ -452,14 +454,38 @@ strong {
 
 /* ... */
 
-@media screen and (max-device-width: 480px) {
+@media screen and (max-width: 1200px) {
+
+	/* Menu */
+
+	#Menu {
+		font-size: 50px;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+
+	/* Menu */
+
+	#Menu {
+		font-size: 30px;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	#NavBar {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 500px) {
 
 	.codrops-icon span {
 		display: none;
 	}
 
-	#header #menuButton {
-		visibility: hidden;
-	}
 
 }

@@ -28,10 +28,10 @@ var AtomizedContent = function(){
 
 		drawFavicon();
 
-		PARTICLE_AMOUNT = 100;
+		PARTICLE_AMOUNT = 150;
 
 		viewWidth = $(window).width();
-		viewHeight = viewWidth * 9/16 * 0.7;
+		viewHeight = window.innerHeight * 0.9;
 
 		colors = [
 			//"e62b1e",
@@ -204,7 +204,7 @@ var AtomizedContent = function(){
 
 	function resize(){
 		viewWidth = $(window).width();
-		viewHeight = viewWidth * 9/16 * 0.7;
+		viewHeight = window.innerHeight * 0.9;
 
 		context.canvas.width  = viewWidth;
 		context.canvas.height = viewHeight;
@@ -217,6 +217,7 @@ var AtomizedContent = function(){
 	}
 
 	function mouseMove(event){
+
 		event = event || window.event; // IE-ism
 
 		var mouseX = event.clientX;
@@ -238,7 +239,7 @@ var AtomizedContent = function(){
 		    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 		}
 
-		console.log('mouseValue');
+		// console.log('mouseValue');
 
    		// Progressbar
 
