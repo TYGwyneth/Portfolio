@@ -317,11 +317,16 @@ strong {
 	color: #e5007d;
 	border-radius: 20px;
 	text-align: center;
+	z-index: 4;
+}
+
+#pageWrapProject .textField strong {
+	font-weight: 600;
 }
 
 #pageWrapProject #contact {
 	position: fixed;
-	top: 350px;
+	bottom: 40px;
 	right: 20px;
 }
 

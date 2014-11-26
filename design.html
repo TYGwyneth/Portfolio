@@ -4,36 +4,91 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 	<title>Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+	<style>
+	/* Fullpage Styling */
+	#fullpage .section {
+		
+	}
+
+	#fullpage .section .slide {
+		text-align: center;
+		color: white;
+	}
+
+	#fullpage .section .slide h1 {
+		font-size: 80px;
+		font-weight: 600;
+	}
+	#fullpage .section #slide1 {
+		background: url(images/design/handiscover.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide3 {
+		background: url(images/design/Wewly.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide4 {
+		background: url(images/design/GrafiskProfil.png) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide5 {
+		background: url(images/design/cramer-01.png) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide6 {
+		background: url(images/design/OtakuLogo.png) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide7 {
+		background: url(images/design/Nightstand.jpg) center no-repeat;
+		background-size: cover;
+	}
+	</style>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script src="js/jquery.slides.js"></script>
 	<script src='js/project.js' type='text/javascript' charset='utf-8'></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage'],
+				sectionsColor: ['#000'],
+				autoScrolling: false,
+				css3: true
+			});
+		});
+	</script>
   	<!-- <base target="_blank"> -->
-</head> 
+</head>
 <body>
 
 	<a href="projects.html"><div id="backButton"><</div></a>
 
-	<div id="pageWrapProject">
-
-		<div id="contact"><a href="mailto:daniel.bjorkman@hyperisland.se?subject=love" target="_top">Contact</a></div>
-
-			<div id="slideshow">
-
-				<div id="slides" style="margin-top: 100px">
-					<img src="images/design/handiscover.jpg">
-					<img src="images/design/mockup.jpg">
-				    <img src="images/design/Wewly.jpg">
-				    <img src="images/design/GrafiskProfil.png">
-				    <img src="images/design/cramer-01.png">
-				    <img src="images/design/OtakuLogo.png">
-				    <img src="images/design/Nightstand.jpg">
-				</div>
-
+	<div id="fullpage">
+		<div class="section " id="section0">
+			<div class="slide" id="slide1">
+				<h1>Design</h1>
 			</div>
-
+			<div class="slide" id="slide3">
+				<h1></h1>
+			</div>
+			<div class="slide" id="slide4">
+				<h1></h1>
+			</div>
+			<div class="slide" id="slide5">
+				<h1></h1>
+			</div>
+			<div class="slide" id="slide6">
+				<h1></h1>
+			</div>
+			<div class="slide" id="slide7">
+				<h1></h1>
+			</div>
+		</div>
 	</div>
-
 
 </body>
 </html>

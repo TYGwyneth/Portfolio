@@ -4,21 +4,73 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 	<title>Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+	<style>
+	/* Fullpage Styling */
+	#fullpage .section .slide {
+		text-align: center;
+		color: white;
+	}
+
+	#fullpage .section .slide h1 {
+		font-size: 80px;
+		font-weight: 600;
+	}
+	#fullpage .section #slide1 {
+		background: url(images/abrigo/abrigo4.png) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide2 {
+		background: url(images/abrigo/abrigo5.png) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide3 {
+		background: url(images/abrigo/abrigo6.png) center no-repeat;
+		background-size: cover;
+	}
+	</style>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script src="js/jquery.slides.js"></script>
 	<script src='js/project.js' type='text/javascript' charset='utf-8'></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage'],
+				sectionsColor: ['#000'],
+				autoScrolling: false,
+				css3: true
+			});
+		});
+	</script>
   	<!-- <base target="_blank"> -->
 </head> 
 <body>
 
 	<a href="projects.html"><div id="backButton"><</div></a>
 
+	<div id="fullpage">
+		<div class="section " id="section0">
+			<div class="slide" id="slide1">
+				<h1>ABRIGO</h1>
+			</div>
+			<div class="slide" id="slide2">
+				<h1></h1>
+			</div>
+
+			<div class="slide" id="slide3">
+				<h1></h1>
+			</div>
+		</div>
+	</div>
+
 	<div id="pageWrapProject">
 
 		<div id="contact"><a href="mailto:daniel.bjorkman@hyperisland.se?subject=love" target="_top">Contact</a></div>
 
-		<div class="titleImg" id="abrigo">Abrigo</div>
+		<!-- <div class="titleImg" id="abrigo">Abrigo</div> -->
 
 			<div class="textField" id="intro"><p><strong>Problem: </strong>'Explore technology and make something to exhibit at an event, the theme is "Distorional Evolution".'</p>
 			
@@ -32,15 +84,6 @@
 
 			<div class="textField">The installation was exhibited at Tvålpalatset in Stockholm for one night and has, although attempts have been made, never been reproduced since.</div>
 
-			<div id="slideshow">
-
-				<div id="slides">
-				    <img src="images/abrigo/abrigo4.png">
-				    <img src="images/abrigo/abrigo5.png">
-				    <img src="images/abrigo/abrigo6.png">
-				</div>
-
-			</div>
 	</div>
 
 

@@ -151,6 +151,7 @@ var AtomizedContent = function(){
 
 			context.fillStyle = 'rgba(249,249,249,0.0)';
 			context.fillRect(0, 0, viewWidth, viewHeight);
+			$( "#progressbar" ).hide();
 			drawRandomShape();
 
 		};

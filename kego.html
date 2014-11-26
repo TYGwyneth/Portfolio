@@ -4,10 +4,55 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 	<title>Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+	<style>
+	/* Fullpage Styling */
+	#fullpage .section {
+		
+	}
+
+	#fullpage .section .slide {
+		text-align: center;
+		color: white;
+	}
+
+	#fullpage .section .slide h1 {
+		font-size: 80px;
+		font-weight: 600;
+	}
+	#fullpage .section #slide1 {
+		background: url(images/kego/2.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide2 {
+		background: url(images/kego/3.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide3 {
+		background: url(images/kego/4.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide4 {
+		background: url(images/kego/1.jpg) center no-repeat;
+		background-size: cover;
+	}
+	</style>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script src="js/jquery.slides.js"></script>
 	<script src='js/project.js' type='text/javascript' charset='utf-8'></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage'],
+				sectionsColor: ['#000'],
+				autoScrolling: false,
+				css3: true
+			});
+		});
+	</script>
   	<!-- <base target="_blank"> -->
 </head> 
 <body>
@@ -16,7 +61,23 @@
 
 	<div id="pageWrapProject">
 
-		<div class="titleImg" id="kego">KEGO</div>
+		<div id="fullpage">
+			<div class="section " id="section0">
+				<div class="slide" id="slide1">
+					<h1>KEGO</h1>
+				</div>
+				<div class="slide" id="slide2">
+					<h1></h1>
+				</div>
+				<div class="slide" id="slide3">
+					<h1></h1>
+				</div>
+				<div class="slide" id="slide4">
+					<h1></h1>
+				</div>
+			</div>
+		</div>
+
 
 		<div id="contact"><a href="mailto:daniel.bjorkman@hyperisland.se?subject=love" target="_top">Contact</a></div>
 
@@ -25,17 +86,6 @@
 			<p>New, unwanted roommate? Dumped by girlfriend/boyfriend? Unexpected child? KEGO is easily scaleable to fit your new living arrangement.</p>
 
 			<p><strong>Available for purchase now!</strong></p>
-			</div>
-
-			<div id="slideshow">
-
-				<div id="slides">
-				    <img src="images/kego/1.jpg">
-				    <img src="images/kego/2.jpg">
-				    <img src="images/kego/3.jpg">
-				    <img src="images/kego/4.jpg">
-				</div>
-
 			</div>
 
 			<div class="textField">

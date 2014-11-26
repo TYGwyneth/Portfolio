@@ -4,19 +4,86 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 	<title>Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+	<style>
+	/* Fullpage Styling */
+	#fullpage .section {
+		
+	}
+
+	#fullpage .section .slide {
+		text-align: center;
+		color: white;
+	}
+
+	#fullpage .section .slide h1 {
+		font-size: 80px;
+		font-weight: 600;
+	}
+	#fullpage .section #slide1 {
+		background: url(images/kioku/prototyp1.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide2 {
+		background: url(images/kioku/prototyp2.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide3 {
+		background: url(images/kioku/prototyp3.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide4 {
+		background: url(images/kioku/mockup.jpg) center no-repeat;
+		background-size: cover;
+	}
+	#fullpage .section #slide5 {
+		background: url(images/kioku/app1.jpg) center no-repeat;
+		background-size: cover;
+	}
+	</style>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script src="js/jquery.slides.js"></script>
 	<script src='js/project.js' type='text/javascript' charset='utf-8'></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage'],
+				sectionsColor: ['#000'],
+				autoScrolling: false,
+				css3: true
+			});
+		});
+	</script>
   	<!-- <base target="_blank"> -->
-</head> 
+</head>
 <body>
 
 	<a href="projects.html"><div id="backButton"><</div></a>
 
-	<div id="pageWrapProject">
+	<div id="fullpage">
+		<div class="section " id="section0">
+			<div class="slide" id="slide1">
+				<h1>KIOKU</h1>
+			</div>
+			<div class="slide" id="slide2">
+				<h1></h1>
+			</div>
+			<div class="slide" id="slide3">
+				<h1></h1>
+			</div>
+			<div class="slide" id="slide4">
+				<h1></h1>
+			</div>
+			<div class="slide" id="slide5">
+				<h1></h1>
+			</div>
+		</div>
+	</div>
 
-		<div class="titleImg" id="kioku">Kioku</div>
+	<div id="pageWrapProject">
 
 		<div id="contact"><a href="mailto:daniel.bjorkman@hyperisland.se?subject=love" target="_top">Contact</a></div>
 
@@ -35,26 +102,13 @@
 			that is worth saving you just press ‘save’ and it transfers the buffered video clip to your phone via Bluetooth. In this way you have the ability to save what you just missed to actively record.</P>	
 
 			<p>When the video is transferred to your phone you choose if you want to edit the video, share it amongst your friends in our community and other social media channels such as Twitter, Instagram, Facebook etc. or keep it in your private gallery.</p>
-
 			</div>
-
-			<div id="slideshow">
-
-				<div id="slides">
-					<img src="images/kioku/app1.jpg">
-					<img src="images/kioku/mockup.jpg">
-				    <img src="images/kioku/prototyp1.jpg">
-				    <img src="images/kioku/prototyp2.jpg">
-				    <img src="images/kioku/prototyp3.jpg">
-				</div>
-
-			</div>
-
-			<div class="textField">After the project ended in school I took it upon myself to build a working prototype of Kioku. With a RAspberry Pi as a starting point I have so far built a total of three iterations and ended up with a functional prototype that can be carried with you, to capture the moments. You can see a testvideo from the final prototype below. I'm still working on a continuation on Kioku 3.0. </div>
 
 			<div class="videoBox">
 				<video width="720" height="540" controls poster="images/kioku/video.png"><source src="images/kioku/test1.mp4" type="video/mp4"></video>
 			</div>
+
+			<div class="textField">After the project ended in school I took it upon myself to build a working prototype of Kioku. With a RAspberry Pi as a starting point I have so far built a total of three iterations and ended up with a functional prototype that can be carried with you, to capture the moments. You can see a testvideo from the final prototype below. I'm still working on a continuation on Kioku 3.0. </div>
 
 	</div>
 
