@@ -153,7 +153,7 @@
 				insertWordToTalkAbout();
 			});
 			$(".talkAbout").fadeIn();
-		}, 5000);
+		}, 2000);
 
 		$('#menuButton').click(function () {
 			$(".talkAbout").html("");
