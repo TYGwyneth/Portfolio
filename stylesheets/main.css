@@ -501,6 +501,14 @@ strong {
 
 /* ... */
 
+@media screen and (max-width: 1340px) {
+
+	#NavBar {
+		font-size: 45px;
+	}
+
+}
+
 @media screen and (max-width: 1200px) {
 
 	/* Menu */
